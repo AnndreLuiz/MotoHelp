@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motohelp/pages/firstpage.dart';
 import 'package:motohelp/pages/homepage.dart';
 import 'package:motohelp/pages/registerpage.dart';
 import 'package:motohelp/pages/registerpage2.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color.fromARGB(255, 59, 102, 137),
       ),
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: const FirstPage(),
     );
   }
 }

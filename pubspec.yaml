@@ -79,7 +79,7 @@ flutter:
   - lib/images/revisao.png
   - lib/images/trocaOleo.png
   - lib/images/trocarpneu.png
-  - lib/images/Veiculo-Caminhao-Guincho.png
+  - lib/images/guincho.png
 
 
   # To add assets to your application, add an assets section, like this:
