@@ -19,8 +19,13 @@ class MyApp extends StatelessWidget {
         scaffoldBackgroundColor: Color.fromARGB(255, 59, 102, 137),
       ),
       debugShowCheckedModeBanner: false,
-      home: const FirstPage(),
+      routes: {
+        '/': (context) => const HomePage(),
+        '/regis': (context) => const RegisterPage(),
+        '/register': (context) => const RegisterSecondPage(),
+        '/new': (context) => const FirstPage(),
+      },
+      initialRoute: '/',
     );
   }
 }
-
