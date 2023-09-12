@@ -564,7 +564,9 @@ class _FirstPageState extends State<FirstPage> {
   Widget menuItem5() {
     return Material(
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).pushNamed('/');
+        },
         child: Padding(
           padding: EdgeInsets.all(15),
           child: Row(
@@ -573,12 +575,15 @@ class _FirstPageState extends State<FirstPage> {
                   child:
                       Icon(Icons.exit_to_app, size: 20, color: Colors.black)),
               Expanded(
-                  flex: 1,
-                  child: Text('Sair',
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 20,
-                      )))
+                flex: 1,
+                child: Text(
+                  'Sair',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
