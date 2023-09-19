@@ -12,153 +12,53 @@ class _RegisterPageState extends State<RegisterPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.all(30.0),
+        padding: const EdgeInsets.all(50.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Form(
-              child: Column(
-                children: [
-                  TextFormField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(10),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(11),
-                        ),
-                      ),
-                      hintText: "Nome",
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'tahoma',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      fillColor: Colors.blue,
-                      filled: true,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(10),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(11),
-                        ),
-                      ),
-                      hintText: "CPF",
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'tahoma',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      fillColor: Colors.blue,
-                      filled: true,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(10),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(11),
-                        ),
-                      ),
-                      hintText: "DD/MM/AAAA",
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'tahoma',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      fillColor: Colors.blue,
-                      filled: true,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(10),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(11),
-                        ),
-                      ),
-                      hintText: "Celular",
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'tahoma',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      fillColor: Colors.blue,
-                      filled: true,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(10),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(11),
-                        ),
-                      ),
-                      hintText: "E-mail",
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'tahoma',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      fillColor: Colors.blue,
-                      filled: true,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(10),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(11),
-                        ),
-                      ),
-                      hintText: "Senha",
-                      hintStyle: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'tahoma',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      fillColor: Colors.blue,
-                      filled: true,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-            SizedBox(
-              height: 15,
+            Container(
+              height: 350,
+              width: 350,
+              child: Image.asset('lib/images/novologo.png'),
             ),
             Padding(
               padding: EdgeInsets.all(10),
               child: Container(
+                width: 400,
+                height: 80,
                 child: ElevatedButton(
-                  child: Text('Proximo'),
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/register');
+                    Navigator.of(context).pushNamed('/regisMotoka');
                   },
+                  child: Text(
+                    'Motoqueiro, Motoboy, Motoka',
+                    style: TextStyle(color: Colors.black, fontSize: 20),
+                  ),
                 ),
               ),
             ),
+            SizedBox(
+              width: 10,
+            ),
+            Padding(
+              padding: EdgeInsets.all(10),
+              child: Container(
+                width: 400,
+                height: 80,
+                child: ElevatedButton(
+                  onPressed: () {
+                    Navigator.of(context).pushNamed('/registerPrestador');
+                  },
+                  child: Text(
+                    'Prestador de Serviço, Mecânico',
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
