@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class RegisterPrestador extends StatefulWidget {
-  const RegisterPrestador({super.key});
+class RegisterPageMotoka extends StatefulWidget {
+  const RegisterPageMotoka({super.key});
 
   @override
-  State<RegisterPrestador> createState() => _RegisterPrestadorState();
+  State<RegisterPageMotoka> createState() => _RegisterPageMotokaState();
 }
 
-class _RegisterPrestadorState extends State<RegisterPrestador> {
+class _RegisterPageMotokaState extends State<RegisterPageMotoka> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
@@ -111,48 +112,6 @@ class _RegisterPrestadorState extends State<RegisterPrestador> {
                           Radius.circular(11),
                         ),
                       ),
-                      hintText: "Serviço Prestado",
-                      hintStyle: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'tahoma',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      fillColor: Colors.blue,
-                      filled: true,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(10),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(11),
-                        ),
-                      ),
-                      hintText: "Tempo de Experiência",
-                      hintStyle: TextStyle(
-                        color: Colors.black,
-                        fontFamily: 'tahoma',
-                        fontWeight: FontWeight.bold,
-                      ),
-                      fillColor: Colors.blue,
-                      filled: true,
-                    ),
-                  ),
-                  SizedBox(
-                    height: 15,
-                  ),
-                  TextFormField(
-                    decoration: InputDecoration(
-                      contentPadding: EdgeInsets.all(10),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.all(
-                          Radius.circular(11),
-                        ),
-                      ),
                       hintText: "E-mail",
                       hintStyle: TextStyle(
                         color: Colors.black,
@@ -201,7 +160,7 @@ class _RegisterPrestadorState extends State<RegisterPrestador> {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/registerPrestador2');
+                    Navigator.of(context).pushNamed('/registerMotoka');
                   },
                 ),
               ),

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class RegisterPagePrestador2 extends StatefulWidget {
-  const RegisterPagePrestador2({super.key});
+class RegisterPageMotoka2 extends StatefulWidget {
+  const RegisterPageMotoka2({super.key});
 
   @override
-  State<RegisterPagePrestador2> createState() => _RegisterPagePrestador2State();
+  State<RegisterPageMotoka2> createState() => _RegisterPageMotoka2State();
 }
 
-class _RegisterPagePrestador2State extends State<RegisterPagePrestador2> {
+class _RegisterPageMotoka2State extends State<RegisterPageMotoka2> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
@@ -36,6 +37,35 @@ class _RegisterPagePrestador2State extends State<RegisterPagePrestador2> {
                         ),
                       ),
                       hintText: "CNH",
+                      hintStyle: TextStyle(
+                        color: Colors.black,
+                        fontFamily: 'tahoma',
+                        fontWeight: FontWeight.bold,
+                      ),
+                      fillColor: Colors.blue,
+                      filled: true,
+                    ),
+                  ),
+                  SizedBox(
+                    height: 15,
+                  ),
+                  TextFormField(
+                    textAlign: TextAlign.center,
+                    decoration: InputDecoration(
+                      prefixIcon: Padding(
+                        padding: EdgeInsets.all(5),
+                        child: Icon(
+                          Icons.camera_alt_outlined,
+                          color: Colors.black,
+                        ),
+                      ),
+                      contentPadding: EdgeInsets.all(10),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.all(
+                          Radius.circular(10),
+                        ),
+                      ),
+                      hintText: "CRLV",
                       hintStyle: TextStyle(
                         color: Colors.black,
                         fontFamily: 'tahoma',

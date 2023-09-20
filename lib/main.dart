@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:motohelp/pages/firstpage.dart';
 import 'package:motohelp/pages/homepage.dart';
-import 'package:motohelp/pages/pageguincho.dart';
-import 'package:motohelp/pages/pageservicos.dart';
-import 'package:motohelp/pages/registerPageMotoka.dart';
-import 'package:motohelp/pages/registerPageMotoka2.dart';
-import 'package:motohelp/pages/registerPagePrestador.dart';
-import 'package:motohelp/pages/registerPagePrestador2.dart';
-import 'package:motohelp/pages/registerpage.dart';
+import 'package:motohelp/pages/servicos/pageguincho.dart';
+import 'package:motohelp/pages/servicos/pageservicos.dart';
+import 'package:motohelp/pages/register/registerMotoka/registerPageMotoka.dart';
+import 'package:motohelp/pages/register/registerMotoka/registerPageMotoka2.dart';
+import 'package:motohelp/pages/register/registerPrestador/registerPagePrestador.dart';
+import 'package:motohelp/pages/register/registerPrestador/registerPagePrestador2.dart';
+import 'package:motohelp/pages/register/registerpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'MotoHelp',
       theme: ThemeData(
-        scaffoldBackgroundColor: Color.fromARGB(255, 59, 102, 137),
+        scaffoldBackgroundColor: const Color.fromARGB(255, 59, 102, 137),
       ),
       debugShowCheckedModeBanner: false,
       routes: {

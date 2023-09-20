@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:motohelp/pages/my_drawer_header.dart';
+import 'package:flutter/material.dart';
+import 'package:motohelp/components/my_drawer_header.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -103,137 +104,21 @@ class _FirstPageState extends State<FirstPage> {
               padding: const EdgeInsets.all(12),
               child: Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          padding: EdgeInsets.all(8),
-                          child: Container(
-                            height: 60,
-                            width: 60,
-                            child: Center(
-                              child: Image.asset('lib/images/pneufurado.png'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          'Pneu Furado',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontFamily: 'tahoma',
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
+                  servicosWidget(
+                    'Pneu Furado',
+                    Image.asset('lib/images/pneufurado.png'),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          padding: EdgeInsets.all(8),
-                          child: Container(
-                            height: 60,
-                            width: 60,
-                            child: Center(
-                              child: Image.asset('lib/images/trocaOleo.png'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          'Oleo',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontFamily: 'tahoma',
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
+                  servicosWidget(
+                    'Oleo',
+                    Image.asset('lib/images/trocaOleo.png'),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          padding: EdgeInsets.all(8),
-                          child: Container(
-                            height: 60,
-                            width: 60,
-                            child: Center(
-                              child: Image.asset('lib/images/revisao.png'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          'Revisão',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontFamily: 'tahoma',
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
+                  servicosWidget(
+                    'Revisão',
+                    Image.asset('lib/images/revisao.png'),
                   ),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(12),
-                          ),
-                          padding: EdgeInsets.all(8),
-                          child: Container(
-                            height: 60,
-                            width: 60,
-                            child: Center(
-                              child: Image.asset('lib/images/guincho.png'),
-                            ),
-                          ),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text(
-                          'Guincho',
-                          style: TextStyle(
-                            color: Colors.black,
-                            fontSize: 14,
-                            fontFamily: 'tahoma',
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                      ],
-                    ),
+                  servicosWidget(
+                    'Guincho',
+                    Image.asset('lib/images/guincho.png'),
                   ),
                   InkWell(
                     onTap: () {
@@ -706,7 +591,9 @@ class _FirstPageState extends State<FirstPage> {
   Widget menuItem5() {
     return Material(
       child: InkWell(
-        onTap: () {},
+        onTap: () {
+          Navigator.of(context).pushNamed('/');
+        },
         child: Padding(
           padding: EdgeInsets.all(15),
           child: Row(
@@ -727,4 +614,43 @@ class _FirstPageState extends State<FirstPage> {
       ),
     );
   }
+}
+
+Widget servicosWidget(String textServices, Image iconesServices) {
+  return InkWell(
+    onTap: () {},
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            padding: const EdgeInsets.all(8),
+            child: Container(
+              height: 60,
+              width: 60,
+              child: Center(
+                child: iconesServices,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          Text(
+            textServices,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 14,
+              fontFamily: 'tahoma',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
 }
