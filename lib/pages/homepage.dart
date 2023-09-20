@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motohelp/components/button_elevated.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -14,7 +15,7 @@ class _HomePageState extends State<HomePage> {
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Container(
+          SizedBox(
             height: 350,
             width: 350,
             child: Image.asset('lib/images/novologo.png'),
@@ -41,7 +42,10 @@ class _HomePageState extends State<HomePage> {
                   const SizedBox(
                     height: 10,
                   ),
-                  bottonEnter(context),
+                  ButtonElevated(
+                    textButton: 'Entrar',
+                    navigatorIndicator: '/new',
+                  ),
                 ],
               ),
             ),
@@ -57,6 +61,7 @@ Widget loginwidget(String controllerEeP) {
     decoration: InputDecoration(
       contentPadding: const EdgeInsets.all(10),
       border: const OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white, width: 2),
         borderRadius: BorderRadius.all(
           Radius.circular(11),
         ),
@@ -73,42 +78,6 @@ Widget loginwidget(String controllerEeP) {
   );
 }
 
-Widget bottonEnter(BuildContext context) {
-  return Padding(
-    padding: const EdgeInsets.all(35),
-    child: SizedBox(
-      height: 50,
-      width: 105,
-      child: ElevatedButton(
-        onPressed: () {
-          Navigator.of(context).pushNamed('/new');
-        },
-        child: const Text(
-          'Entrar',
-          style: const TextStyle(
-              color: Colors.white,
-              fontSize: 20,
-              fontFamily: 'Montserrat-SemiBold'),
-        ),
-        style: ButtonStyle(
-          backgroundColor: MaterialStateProperty.all(
-            Colors.blue,
-          ),
-          shape: MaterialStateProperty.all(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(15),
-              side: const BorderSide(
-                color: Colors.white,
-                width: 2,
-              ),
-            ),
-          ),
-        ),
-      ),
-    ),
-  );
-}
-
 Widget cadastradoWithProblem(BuildContext context, String texto) {
   return Row(
     mainAxisAlignment: MainAxisAlignment.start,
@@ -116,13 +85,13 @@ Widget cadastradoWithProblem(BuildContext context, String texto) {
       Text(
         texto,
         textAlign: TextAlign.left,
-        style: TextStyle(
+        style: const TextStyle(
           color: Colors.white,
           fontFamily: 'Tahoma',
         ),
       ),
       InkWell(
-        child: Text(
+        child: const Text(
           'Clique aqui',
           style: TextStyle(
             fontFamily: 'Tahoma',
@@ -130,7 +99,7 @@ Widget cadastradoWithProblem(BuildContext context, String texto) {
           ),
         ),
         onTap: () {
-          Navigator.of(context).pushNamed('/regis');
+          Navigator.of(context).pushNamed('/regist');
         },
       )
     ],

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
 
-class RegisterPage extends StatefulWidget {
-  const RegisterPage({super.key});
+class RegisterPageMotoka extends StatefulWidget {
+  const RegisterPageMotoka({super.key});
 
   @override
-  State<RegisterPage> createState() => _RegisterPageState();
+  State<RegisterPageMotoka> createState() => _RegisterPageMotokaState();
 }
 
-class _RegisterPageState extends State<RegisterPage> {
+class _RegisterPageMotokaState extends State<RegisterPageMotoka> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: Padding(
         padding: const EdgeInsets.all(30.0),
         child: Column(
@@ -29,7 +30,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       hintText: "Nome",
                       hintStyle: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontFamily: 'tahoma',
                         fontWeight: FontWeight.bold,
                       ),
@@ -50,7 +51,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       hintText: "CPF",
                       hintStyle: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontFamily: 'tahoma',
                         fontWeight: FontWeight.bold,
                       ),
@@ -69,9 +70,9 @@ class _RegisterPageState extends State<RegisterPage> {
                           Radius.circular(11),
                         ),
                       ),
-                      hintText: "DD/MM/AAAA",
+                      hintText: "Data Nascimento DD/MM/AAAA",
                       hintStyle: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontFamily: 'tahoma',
                         fontWeight: FontWeight.bold,
                       ),
@@ -92,7 +93,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       hintText: "Celular",
                       hintStyle: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontFamily: 'tahoma',
                         fontWeight: FontWeight.bold,
                       ),
@@ -113,7 +114,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       hintText: "E-mail",
                       hintStyle: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontFamily: 'tahoma',
                         fontWeight: FontWeight.bold,
                       ),
@@ -134,7 +135,7 @@ class _RegisterPageState extends State<RegisterPage> {
                       ),
                       hintText: "Senha",
                       hintStyle: TextStyle(
-                        color: Colors.white,
+                        color: Colors.black,
                         fontFamily: 'tahoma',
                         fontWeight: FontWeight.bold,
                       ),
@@ -152,9 +153,14 @@ class _RegisterPageState extends State<RegisterPage> {
               padding: EdgeInsets.all(10),
               child: Container(
                 child: ElevatedButton(
-                  child: Text('Proximo'),
+                  child: Text(
+                    'Proximo',
+                    style: TextStyle(
+                      color: Colors.black,
+                    ),
+                  ),
                   onPressed: () {
-                    Navigator.of(context).pushNamed('/register');
+                    Navigator.of(context).pushNamed('/registerMotoka');
                   },
                 ),
               ),
