@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 import 'package:motohelp/components/my_drawer_header.dart';
+import 'package:motohelp/components/widget_service.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -133,10 +134,10 @@ class _FirstPageState extends State<FirstPage> {
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(12),
                             ),
-                            padding: EdgeInsets.all(8),
+                            padding: EdgeInsets.all(12),
                             child: Container(
-                              height: 60,
-                              width: 60,
+                              height: 30,
+                              width: 30,
                               child: Center(
                                 child: Image.asset('lib/images/iconmais.png'),
                               ),
@@ -181,279 +182,27 @@ class _FirstPageState extends State<FirstPage> {
               padding: const EdgeInsets.all(12),
               child: Row(
                 children: [
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        top: 1.0, left: 20, bottom: 1, right: 20),
-                    child: Container(
-                      width: 210,
-                      height: 210,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              width: 90,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Guincho',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                    fontFamily: 'tahoma',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              child: Image.asset('lib/images/guincho.png'),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 40,
-                              width: 300,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Solicitar',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontFamily: 'tahoma',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        top: 1.0, left: 20, bottom: 1, right: 20),
-                    child: Container(
-                      width: 210,
-                      height: 210,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              width: 90,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Combustivel',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15,
-                                    fontFamily: 'tahoma',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              child: Image.asset(
-                                  'lib/images/bombadecombustivel.png'),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 40,
-                              width: 300,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Solicitar',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontFamily: 'tahoma',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        top: 1.0, left: 20, bottom: 1, right: 20),
-                    child: Container(
-                      width: 210,
-                      height: 210,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              width: 90,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Pneu Furado',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 15,
-                                    fontFamily: 'tahoma',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              child: Image.asset('lib/images/pneufurado.png'),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 40,
-                              width: 300,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Solicitar',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontFamily: 'tahoma',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                        top: 1.0, left: 20, bottom: 1, right: 20),
-                    child: Container(
-                      width: 210,
-                      height: 210,
-                      decoration: BoxDecoration(
-                        color: Colors.blue,
-                        borderRadius: BorderRadius.circular(12),
-                      ),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              width: 90,
-                              height: 30,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Freios',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontSize: 20,
-                                    fontFamily: 'tahoma',
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                          Center(
-                            child: Container(
-                              width: 100,
-                              height: 100,
-                              child: Image.asset('lib/images/discodefreio.png'),
-                            ),
-                          ),
-                          Padding(
-                            padding: const EdgeInsets.all(8.0),
-                            child: Container(
-                              height: 40,
-                              width: 300,
-                              decoration: BoxDecoration(
-                                color: Colors.white,
-                                borderRadius: BorderRadius.circular(12),
-                              ),
-                              child: Center(
-                                child: Text(
-                                  'Solicitar',
-                                  style: TextStyle(
-                                    color: Colors.black,
-                                    fontFamily: 'tahoma',
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 20,
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
+                  MyWidgetService(
+                      imageInfo: Image.asset('lib/images/guincho.png'),
+                      textInfo: 'Guincho',
+                      navigatorPage: '/servicoguincho'),
+                  MyWidgetService(
+                      imageInfo:
+                          Image.asset('lib/images/bombadecombustivel.png'),
+                      textInfo: 'Combustivel',
+                      navigatorPage: 'navigatorPage'),
+                  MyWidgetService(
+                      imageInfo: Image.asset('lib/images/guincho.png'),
+                      navigatorPage: '',
+                      textInfo: 'Guincho'),
+                  MyWidgetService(
+                      imageInfo: Image.asset('lib/images/pneufurado.png'),
+                      textInfo: 'Pneu Furado',
+                      navigatorPage: 'navigatorPage'),
+                  MyWidgetService(
+                      imageInfo: Image.asset('lib/images/discodefreio.png'),
+                      textInfo: 'Freios',
+                      navigatorPage: ''),
                 ],
               ),
             ),
@@ -645,6 +394,115 @@ Widget servicosWidget(String textServices, Image iconesServices) {
             style: const TextStyle(
               color: Colors.black,
               fontSize: 14,
+              fontFamily: 'tahoma',
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget solicitarNovamente() {
+  return Padding(
+    padding: const EdgeInsets.only(top: 1.0, left: 20, bottom: 1, right: 20),
+    child: Container(
+      width: 210,
+      height: 210,
+      decoration: BoxDecoration(
+        color: Colors.blue,
+        borderRadius: BorderRadius.circular(12),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              width: 90,
+              height: 30,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Center(
+                child: Text(
+                  'Pneu Furado',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontSize: 15,
+                    fontFamily: 'tahoma',
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          Center(
+            child: Container(
+              width: 100,
+              height: 100,
+              child: Image.asset('lib/images/pneufurado.png'),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 40,
+              width: 300,
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Center(
+                child: Text(
+                  'Solicitar',
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontFamily: 'tahoma',
+                    fontWeight: FontWeight.bold,
+                    fontSize: 20,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
+    ),
+  );
+}
+
+Widget servicosWidgetPag2(String textInfo, Image imageInfo) {
+  return InkWell(
+    onTap: () {},
+    child: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            padding: const EdgeInsets.all(8),
+            child: SizedBox(
+              height: 150,
+              width: 150,
+              child: Center(
+                child: imageInfo,
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 8,
+          ),
+          Text(
+            textInfo,
+            style: const TextStyle(
+              color: Colors.black,
+              fontSize: 20,
               fontFamily: 'tahoma',
               fontWeight: FontWeight.bold,
             ),
