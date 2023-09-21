@@ -60,26 +60,8 @@ flutter:
   
   
   assets:
-  - lib/images/abastecimento.png
-  - lib/images/avatar1.png
-  - lib/images/motohelp.png
-  - lib/images/avatar2.png
-  - lib/images/avatar3.png
-  - lib/images/avatarperfil.jpg
-  - lib/images/bombadecombustivel.png
-  - lib/images/carganabateria.png
-  - lib/images/discodefreio.png
-  - lib/images/farol.png
-  - lib/images/googlemaps.png
-  - lib/images/novologo.png
-  - lib/images/planobronze.png
-  - lib/images/planoouro.png
-  - lib/images/planoprata.png
-  - lib/images/pneufurado.png
-  - lib/images/revisao.png
-  - lib/images/trocaOleo.png
-  - lib/images/trocarpneu.png
-  - lib/images/guincho.png
+  - lib/images
+
 
 
   # To add assets to your application, add an assets section, like this:

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:motohelp/components/widget_service.dart';
 
 class PagesServicos extends StatefulWidget {
   const PagesServicos({super.key});
@@ -75,80 +76,62 @@ class _PagesServicosState extends State<PagesServicos> {
                   ),
                   child: Column(
                     children: <Widget>[
-                      servicosWidgetPag(
-                        'Pneu Furado',
-                        Image.asset('lib/images/pneufurado.png'),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Pneu Furado',
+                        imageInfo: Image.asset('lib/images/pneufurado.png'),
                       ),
-                      servicosWidgetPag(
-                        'Oleo',
-                        Image.asset('lib/images/trocaOleo.png'),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Oleo',
+                        imageInfo: Image.asset('lib/images/trocaOleo.png'),
                       ),
-                      servicosWidgetPag(
-                        'Revisão',
-                        Image.asset('lib/images/revisao.png'),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Revisão',
+                        imageInfo: Image.asset('lib/images/revisao.png'),
                       ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.of(context).pushNamed('/servicoguincho');
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  color: Colors.white,
-                                  borderRadius: BorderRadius.circular(12),
-                                ),
-                                padding: EdgeInsets.all(8),
-                                child: Container(
-                                  height: 150,
-                                  width: 150,
-                                  child: Center(
-                                    child:
-                                        Image.asset('lib/images/guincho.png'),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(
-                                height: 8,
-                              ),
-                              Text(
-                                'Guincho',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontSize: 20,
-                                  fontFamily: 'tahoma',
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                            ],
-                          ),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Guincho',
+                        imageInfo: Image.asset(
+                          'lib/images/guincho.png',
                         ),
                       ),
-                      servicosWidgetPag(
-                        'Abastecer',
-                        Image.asset('lib/images/abastecimento.png'),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Abastecer',
+                        imageInfo: Image.asset(
+                          'lib/images/abastecimento.png',
+                        ),
                       ),
-                      servicosWidgetPag(
-                        'Carga na bateria',
-                        Image.asset('lib/images/carganabateria.png'),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Carga na bateria',
+                        imageInfo: Image.asset(
+                          'lib/images/carganabateria.png',
+                        ),
                       ),
-                      servicosWidgetPag(
-                        'Carga na bateria',
-                        Image.asset('lib/images/carganabateria.png'),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Trocar pneu',
+                        imageInfo: Image.asset(
+                          'lib/images/trocarpneu.png',
+                        ),
                       ),
-                      servicosWidgetPag(
-                        'Trocar pneu',
-                        Image.asset('lib/images/trocarpneu.png'),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Trocar pastilha de freio',
+                        imageInfo: Image.asset(
+                          'lib/images/discodefreio.png',
+                        ),
                       ),
-                      servicosWidgetPag(
-                        'Trocar pastilha de freio',
-                        Image.asset('lib/images/discodefreio.png'),
-                      ),
-                      servicosWidgetPag(
-                        'Trocar Lampada',
-                        Image.asset('lib/images/farol.png'),
+                      MyWidgetService(
+                        navigatorPage: '/servicoguincho',
+                        textInfo: 'Trocar Lampada',
+                        imageInfo: Image.asset(
+                          'lib/images/farol.png',
+                        ),
                       ),
                     ],
                   ),
@@ -160,43 +143,4 @@ class _PagesServicosState extends State<PagesServicos> {
       ),
     );
   }
-}
-
-Widget servicosWidgetPag(String textInfo, Image imageInfo) {
-  return InkWell(
-    onTap: () {},
-    child: Padding(
-      padding: const EdgeInsets.all(8.0),
-      child: Column(
-        children: [
-          Container(
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-            ),
-            padding: const EdgeInsets.all(8),
-            child: SizedBox(
-              height: 150,
-              width: 150,
-              child: Center(
-                child: imageInfo,
-              ),
-            ),
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          Text(
-            textInfo,
-            style: const TextStyle(
-              color: Colors.black,
-              fontSize: 20,
-              fontFamily: 'tahoma',
-              fontWeight: FontWeight.bold,
-            ),
-          ),
-        ],
-      ),
-    ),
-  );
 }
